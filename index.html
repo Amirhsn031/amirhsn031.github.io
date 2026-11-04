@@ -15,6 +15,319 @@
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
+        .cinematic-hero {
+  min-height: 82vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5%;
+  direction: ltr;
+  position: relative;
+  overflow: hidden;
+}
+
+.cinematic-hero .hero-content {
+  direction: rtl;
+  text-align: left;
+  z-index: 3;
+}
+
+.cinematic-hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(65px, 8vw, 125px);
+  font-weight: 700;
+  letter-spacing: -7px;
+  direction: ltr;
+  text-align: left;
+  margin: 20px 0 30px;
+  background: linear-gradient(
+    100deg,
+    #fff,
+    #dffaff,
+    #70dcff
+  );
+  color: transparent;
+  background-clip: text;
+}
+
+.cinematic-hero .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #c7d7ed;
+  font: 600 11px 'Space Grotesk', sans-serif;
+  letter-spacing: 2px;
+  direction: ltr;
+}
+
+.live-dot,
+.availability span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #67f3d1;
+  box-shadow: 0 0 15px #67f3d1;
+  animation: pulse 1.5s infinite;
+}
+
+.signature {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  direction: ltr;
+  margin-bottom: 35px;
+}
+
+.signature strong {
+  font: 400 45px 'Space Grotesk';
+  color: #65e9ff;
+}
+
+.signature > span {
+  height: 45px;
+  width: 1px;
+  background: #67e8f9;
+}
+
+.signature div b,
+.signature div small {
+  display: block;
+  font-family: 'Space Grotesk';
+  letter-spacing: 3px;
+}
+
+.signature div b {
+  color: white;
+  font-size: 13px;
+}
+
+.signature div small {
+  color: #94a3b8;
+  font-size: 10px;
+  margin-top: 8px;
+}
+
+.sound-wave {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.sound-wave i {
+  width: 3px;
+  height: 20px;
+  border-radius: 5px;
+  background: #67e8f9;
+  box-shadow: 0 0 12px #67e8f9;
+  animation: wave .8s infinite alternate;
+}
+
+.sound-wave i:nth-child(2n) {
+  animation-delay: .3s;
+}
+
+.sound-wave i:nth-child(3n) {
+  animation-delay: .5s;
+}
+
+@keyframes wave {
+  to { transform: scaleY(.3); }
+}
+
+.hero-description {
+  color: #b8c7da;
+  font-size: 16px;
+  line-height: 2.2;
+  max-width: 600px;
+  text-align: right;
+}
+
+.availability {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  direction: ltr;
+  color: #55edb5;
+  font: 600 13px 'Space Grotesk';
+  letter-spacing: 2px;
+  margin: 30px 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 18px;
+}
+
+.btn {
+  padding: 17px 28px;
+  border-radius: 9px;
+  transition: .35s;
+}
+
+.btn-primary {
+  background: linear-gradient(110deg,#16b9ec,#7040f5);
+  box-shadow: 0 8px 35px #4738e855;
+}
+
+.btn-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 45px #5b55ff99;
+}
+
+.btn-secondary {
+  border: 1px solid #3289b6;
+}
+
+.btn-secondary:hover {
+  background: #10233a;
+  border-color: #a78bfa;
+}
+
+/* ORBITAL UNIVERSE */
+
+.hero-visual {
+  position: relative;
+  min-height: 620px;
+  display: grid;
+  place-items: center;
+  direction: ltr;
+}
+
+.orbit-system {
+  width: min(540px, 85vw);
+  aspect-ratio: 1;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.orbit {
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  border: 1px solid rgba(67,200,255,.65);
+  border-radius: 50%;
+  box-shadow: 0 0 15px #24c9ff22;
+}
+
+.orbit-a { transform: rotate(-35deg); }
+.orbit-b {
+  transform: rotate(45deg);
+  border-color: #a78bfa;
+}
+.orbit-c {
+  transform: rotate(90deg);
+  width: 90%;
+  height: 55%;
+  border-color: #35c9ff;
+}
+.orbit-d {
+  transform: rotate(-70deg);
+  width: 105%;
+  height: 70%;
+  border-color: #647cff55;
+}
+
+.core {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+    circle,
+    #10295a,
+    #030918 70%
+  );
+  border: 1px solid #8beaff;
+  box-shadow:
+    0 0 30px #39caff66,
+    0 0 90px #704cff55,
+    inset 0 0 35px #4e8cff44;
+  z-index: 2;
+  animation: coreFloat 5s ease-in-out infinite;
+}
+
+.core span {
+  font: 700 85px 'Space Grotesk';
+  color: white;
+  text-shadow: 0 0 25px #67e8f9;
+}
+
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.planet-one {
+  width: 27px;
+  height: 27px;
+  top: 25%;
+  left: 15%;
+  background: radial-gradient(circle at 30% 30%,white,#20caff,#2142a0);
+  box-shadow: 0 0 25px #20caff;
+}
+
+.planet-two {
+  width: 23px;
+  height: 23px;
+  top: 15%;
+  right: 27%;
+  background: radial-gradient(circle at 30% 30%,white,#628aff,#3434a8);
+  box-shadow: 0 0 22px #628aff;
+}
+
+.planet-three {
+  width: 24px;
+  height: 24px;
+  bottom: 17%;
+  left: 27%;
+  background: radial-gradient(circle at 30% 30%,white,#a855f7,#51218e);
+  box-shadow: 0 0 25px #a855f7;
+}
+
+.planet-four {
+  width: 18px;
+  height: 18px;
+  right: 15%;
+  bottom: 35%;
+  background: #658aff;
+  box-shadow: 0 0 20px #658aff;
+}
+
+@keyframes coreFloat {
+  50% { transform: translateY(-12px) scale(1.03); }
+}
+
+@keyframes pulse {
+  50% { opacity: .35; }
+}
+
+@media(max-width:900px) {
+  .cinematic-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .hero-visual { min-height: 380px; order: 2; }
+  .cinematic-hero .hero-content { order: 1; text-align: center; }
+  .cinematic-hero h1 { text-align: center; }
+  .cinematic-hero .eyebrow,
+  .availability,
+  .buttons { justify-content: center; }
+  .signature { justify-content: center; }
+  .hero-description { text-align: center; margin-inline: auto; }
+}
+
+@media(max-width:500px) {
+  .hero-visual { min-height: 310px; }
+  .core { width: 130px; height: 130px; }
+  .core span { font-size: 65px; }
+  .signature strong { font-size: 32px; }
+}
 
 /* PREMIUM HOVER EFFECT */
 
@@ -1295,6 +1608,50 @@ window.addEventListener("mousemove", (event) => {
 
 });
 </script>
+<script>
+const canvas = document.getElementById("universe");
+const ctx = canvas.getContext("2d");
 
+let w, h, stars = [];
+
+function resize() {
+  w = canvas.width = canvas.offsetWidth;
+  h = canvas.height = canvas.offsetHeight;
+
+  stars = Array.from({length:130}, () => ({
+    x:Math.random()*w,
+    y:Math.random()*h,
+    r:Math.random()*1.5,
+    speed:Math.random()*.35+.08
+  }));
+}
+
+function animate() {
+  ctx.clearRect(0,0,w,h);
+
+  stars.forEach(s => {
+    s.y += s.speed;
+
+    if(s.y > h) {
+      s.y = 0;
+      s.x = Math.random()*w;
+    }
+
+    ctx.beginPath();
+    ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+    ctx.fillStyle = "rgba(120,220,255,.8)";
+    ctx.shadowBlur = 12;
+    ctx.shadowColor = "#36caff";
+    ctx.fill();
+  });
+
+  requestAnimationFrame(animate);
+}
+
+resize();
+animate();
+
+window.addEventListener("resize",resize);
+</script>
 </body>
 </html>
