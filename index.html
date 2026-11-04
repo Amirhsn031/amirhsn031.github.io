@@ -165,16 +165,7 @@
 
         /* HERO */
 
-        .hero {
-            min-height: 80vh;
-
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-
-            align-items: center;
-            gap: 50px;
-
-            padding: 80px 0;
+        .hero {: 80px 0;
         }
 
         .eyebrow {
@@ -185,35 +176,73 @@
             margin-bottom: 20px;
         }
 
-        .hero h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(3rem, 7vw, 6rem);
-            line-height: 1.05;
-            letter-spacing: -4px;
-            margin-bottom: 25px;
-        }
+        <header class="hero cinematic-hero" id="home">
 
-        .hero h1 span {
-            display: block;
+  <div class="hero-visual">
+    <canvas id="universe"></canvas>
 
-            background: linear-gradient(
-                100deg,
-                #ffffff,
-                #60a5fa,
-                #2563eb
-            );
+    <div class="orbit-system">
+      <div class="orbit orbit-a"></div>
+      <div class="orbit orbit-b"></div>
+      <div class="orbit orbit-c"></div>
+      <div class="orbit orbit-d"></div>
 
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
+      <div class="planet planet-one"></div>
+      <div class="planet planet-two"></div>
+      <div class="planet planet-three"></div>
+      <div class="planet planet-four"></div>
 
-        .hero-description {
-            color: var(--muted);
-            max-width: 540px;
-            font-size: 1.05rem;
-            margin-bottom: 35px;
-        }
+      <div class="core">
+        <span>A.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      <span class="live-dot"></span>
+      INDEPENDENT CREATIVE MIND — 2026
+    </div>
+
+    <h1>Amirhsn</h1>
+
+    <div class="signature">
+      <strong>031</strong>
+      <span></span>
+      <div>
+        <b>INDEPENDENT CREATIVE</b>
+        <small>IDEAS INTO DIGITAL REALITY</small>
+      </div>
+      <div class="sound-wave">
+        <i></i><i></i><i></i><i></i>
+        <i></i><i></i><i></i><i></i>
+      </div>
+    </div>
+
+    <p class="hero-description">
+      اینجا فضایی برای خلاقیت، ایده‌ها و خلق کارهای ارزشمند است.
+      نگاهی به پروژه‌های من بیندازید و برای همکاری یا گفتگو
+      با من در ارتباط باشید.
+    </p>
+
+    <div class="availability">
+      <span></span>
+      AVAILABLE FOR PROJECTS
+    </div>
+
+    <div class="buttons">
+      <a href="#projects" class="btn btn-primary">
+        مشاهده پروژه‌ها ↗
+      </a>
+
+      <a href="#contact" class="btn btn-secondary">
+        ارتباط با من
+      </a>
+    </div>
+
+  </div>
+</header>
 
         .buttons {
             display: flex;
