@@ -1,18 +1,18 @@
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Amirhsn031 | Creative Portfolio</title>
+    <title>Amirhsn031 | نمونه‌کار خلاقانه</title>
 
-    <meta name="description" content="A personal portfolio by Amirhsn031. Explore creative projects, graphic design, and visual work.">
+    <meta name="description" content="وب‌سایت شخصی Amirhsn031؛ مجموعه‌ای از پروژه‌های خلاقانه، طراحی گرافیک و آثار بصری.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
 
@@ -90,7 +90,7 @@
         body {
             background: var(--bg);
             color: var(--white);
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'Vazirmatn', 'DM Sans', sans-serif;
             line-height: 1.8;
             overflow-x: hidden;
         }
@@ -782,6 +782,75 @@ body::after {
     }
 }
 
+
+        /* PERSIAN / RTL OVERRIDES */
+        body {
+            font-family: 'Vazirmatn', 'DM Sans', sans-serif;
+        }
+
+        .nav-links {
+            direction: rtl;
+        }
+
+        .hero-content,
+        section.content-section {
+            text-align: right;
+        }
+
+        .hero-description {
+            margin-right: 0;
+            margin-left: auto;
+        }
+
+        .eyebrow,
+        .section-label {
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+        .hero h1,
+        .section-title {
+            letter-spacing: 0;
+            font-family: 'Vazirmatn', 'Space Grotesk', sans-serif;
+        }
+
+        .about-card p {
+            line-height: 2.1;
+        }
+
+        .skill,
+        .project-card,
+        .contact-item {
+            font-family: 'Vazirmatn', 'DM Sans', sans-serif;
+        }
+
+        .contact-item {
+            direction: rtl;
+            text-align: right;
+        }
+
+        .contact-item strong {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+
+        footer {
+            direction: rtl;
+        }
+
+        @media (max-width: 800px) {
+            .hero-content,
+            section.content-section {
+                text-align: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
     </style>
 </head>
 <canvas id="particles"></canvas>
@@ -798,10 +867,10 @@ body::after {
             </a>
 
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">درباره من</a></li>
+                <li><a href="#skills">مهارت‌ها</a></li>
+                <li><a href="#projects">پروژه‌ها</a></li>
+                <li><a href="#contact">ارتباط</a></li>
             </ul>
         </nav>
 
@@ -812,7 +881,7 @@ body::after {
             <div class="hero-content">
 
                 <div class="eyebrow">
-                    Creative Portfolio
+                    نمونه‌کار خلاقانه
                 </div>
 
                 <h1>
@@ -821,19 +890,18 @@ body::after {
                 </h1>
 
                 <p class="hero-description">
-                    A personal space for creativity, ideas,
-                    and meaningful work. Discover my projects
-                    and connect with me.
+                    اینجا فضایی برای خلاقیت، ایده‌ها و خلق کارهای ارزشمند است.
+                    نگاهی به پروژه‌های من بیندازید و برای همکاری یا گفتگو با من در ارتباط باشید.
                 </p>
 
                 <div class="buttons">
 
                     <a href="#projects" class="btn btn-primary">
-                        Explore My Work
+                        مشاهده پروژه‌ها
                     </a>
 
                     <a href="#contact" class="btn btn-secondary">
-                        Get In Touch
+                        ارتباط با من
                     </a>
 
                 </div>
@@ -864,22 +932,19 @@ body::after {
         <section class="content-section reveal" id="about">
 
             <div class="section-label">
-                01 / Introduction
+                ۰۱ / معرفی
             </div>
 
             <h2 class="section-title">
-                About Me
+                درباره من
             </h2>
 
             <div class="about-card">
 
                 <p>
-                    I believe that when it comes to creating
-                    something meaningful, every single detail
-                    matters. My goal is to transform ideas into
-                    creative, well-considered, and visually
-                    compelling work. Take a look at my projects,
-                    and feel free to get in touch.
+                    من باور دارم برای خلق اثری ارزشمند، تک‌تک جزئیات اهمیت دارند.
+                    هدفم تبدیل ایده‌ها به آثاری خلاقانه، سنجیده و چشم‌نواز است.
+                    می‌توانید پروژه‌های من را ببینید و برای گفتگو یا همکاری با من در تماس باشید.
                 </p>
 
             </div>
@@ -891,23 +956,23 @@ body::after {
         <section class="content-section reveal" id="skills">
 
             <div class="section-label">
-                02 / Expertise
+                ۰۲ / تخصص‌ها
             </div>
 
             <h2 class="section-title">
-                Skills & Interests
+                مهارت‌ها و علاقه‌مندی‌ها
             </h2>
 
             <div class="skills">
 
-                <div class="skill">Graphic Design</div>
-                <div class="skill">Poster Design</div>
-                <div class="skill">Calendar Design</div>
-                <div class="skill">Visual Design</div>
-                <div class="skill">Typography</div>
+                <div class="skill">طراحی گرافیک (Graphic Design)</div>
+                <div class="skill">طراحی پوستر (Poster Design)</div>
+                <div class="skill">طراحی تقویم (Calendar Design)</div>
+                <div class="skill">طراحی بصری (Visual Design)</div>
+                <div class="skill">تایپوگرافی (Typography)</div>
                 <div class="skill">HTML & CSS</div>
-                <div class="skill">Creative Thinking</div>
-                <div class="skill">Attention to Detail</div>
+                <div class="skill">تفکر خلاق (Creative Thinking)</div>
+                <div class="skill">توجه به جزئیات (Attention to Detail)</div>
 
             </div>
 
@@ -918,11 +983,11 @@ body::after {
         <section class="content-section reveal" id="projects">
 
             <div class="section-label">
-                03 / Selected Work
+                ۰۳ / آثار منتخب
             </div>
 
             <h2 class="section-title">
-                My Projects
+                پروژه‌های من
             </h2>
 
             <div class="projects">
@@ -935,12 +1000,12 @@ body::after {
                         <h3>Calendar Design</h3>
 
                         <p>
-                            Creative calendar concepts
-                            with thoughtful visual details.
+                            ایده‌های خلاقانه برای طراحی تقویم،
+                            همراه با جزئیات بصری دقیق و فکرشده.
                         </p>
 
                         <span class="project-tag">
-                            Graphic Design
+                            طراحی گرافیک
                         </span>
                     </div>
 
@@ -954,12 +1019,12 @@ body::after {
                         <h3>Poster Design</h3>
 
                         <p>
-                            Visual compositions designed
-                            to communicate ideas.
+                            ترکیب‌بندی‌های بصری برای انتقال
+                            مؤثر ایده‌ها و پیام‌ها.
                         </p>
 
                         <span class="project-tag">
-                            Visual Communication
+                            ارتباط بصری
                         </span>
                     </div>
 
@@ -973,12 +1038,12 @@ body::after {
                         <h3>Creative Concepts</h3>
 
                         <p>
-                            Exploring new ideas through
-                            creative visual experiments.
+                            کشف ایده‌های تازه از طریق
+                            تجربه‌ها و آزمایش‌های خلاقانه بصری.
                         </p>
 
                         <span class="project-tag">
-                            Creative Design
+                            طراحی خلاقانه
                         </span>
                     </div>
 
@@ -993,11 +1058,11 @@ body::after {
         <section class="content-section reveal" id="contact">
 
             <div class="section-label">
-                04 / Let's Connect
+                ۰۴ / در ارتباط باشیم
             </div>
 
             <h2 class="section-title">
-                Contact Me
+                راه‌های ارتباطی
             </h2>
 
             <div class="contact-card">
@@ -1014,7 +1079,7 @@ body::after {
                         </div>
 
                         <div>
-                            <small>Email</small>
+                            <small>ایمیل</small>
 
                             <strong>
                                 amir9090elx@gmail.com
@@ -1035,7 +1100,7 @@ body::after {
                         </div>
 
                         <div>
-                            <small>Telegram</small>
+                            <small>تلگرام</small>
 
                             <strong>
                                 @AmirHsn031
@@ -1056,7 +1121,7 @@ body::after {
                         </div>
 
                         <div>
-                            <small>Instagram</small>
+                            <small>اینستاگرام</small>
 
                             <strong>
                                 amirh_.mohamadi
@@ -1076,9 +1141,9 @@ body::after {
         <footer>
 
             <p>
-                Created by
+                طراحی و توسعه توسط
                 <span>Amirhsn031</span>
-                — All rights reserved.
+                — تمامی حقوق محفوظ است.
             </p>
 
         </footer>
